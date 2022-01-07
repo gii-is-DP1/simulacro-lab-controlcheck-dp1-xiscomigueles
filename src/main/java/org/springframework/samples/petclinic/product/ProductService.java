@@ -17,15 +17,19 @@ public class ProductService {
     }
 
     public List<Product> getProductsCheaperThan(double price) {
-        return null;
+        return productrepo.findByPriceLessThan(price);
     }
 
     public ProductType getProductType(String typeName) {
         return productrepo.getProductType(typeName);
     }
+    public List<ProductType> getAllProductTypes(){
+    	return productrepo.findAllProductTypes();
+    }
+ 
 
     public Product save(Product p){
-        return null;       
+        return productrepo.save(p);       
     }
 
     

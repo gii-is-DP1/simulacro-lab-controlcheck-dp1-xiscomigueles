@@ -24,10 +24,15 @@ public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
+	
+	@NotNull
     @Size(min = 3, max = 50)
     String name;
+	
+	@NotNull
     @Min(0)
     double price;
+	
     @ManyToOne
     @JoinColumn(name= "productstype")
     ProductType productType;
